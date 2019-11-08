@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate,
         UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var mealnameLabel: UILabel!
@@ -42,11 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    
-    @IBAction func setDefaultLabelText(_ sender: UIButton) {
-        mealnameLabel.text = "Default Text"
-    }
-    
+        
     //MARK: UIImagePickerControllerDelegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
